@@ -201,6 +201,12 @@ img {
     color: var(--main-color-theme-light);
 }
 
+.subtitle::before {
+    background-size: 70px 70px;
+    background-image: url(../images/advantages/antenna-1.svg);
+    content: "";
+}
+
 .advantages-list-item .subtitle,
 .team-member-name {
     margin-top: 0;
