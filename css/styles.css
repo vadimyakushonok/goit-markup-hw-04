@@ -132,13 +132,8 @@ img {
 .main-section {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: 
-    linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
-    url(../images/background/Header\ img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
+    background-color: var(--secondary-color);
+    /* background сделал серым что бы было видно как отображается белый тест */
 }
 
 .main-title {
@@ -284,7 +279,6 @@ img {
 .team-title-item {
     background-color: var(--main-backgroud-color);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-title-item:not(:last-child) {
     margin-right: 30px;
@@ -465,7 +459,6 @@ img {
 .filter-modal-btn:focus {
     background-color: var(--accent-color);
     color: var(--accent-color-blu-fone);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .exampls-work {
@@ -512,11 +505,6 @@ img {
 
 .exampls-work-list-item:not(:nth-last-child(-n+3)) {
     margin-bottom: 30px;
-}
-
-.exampls-work-list-item:hover,
-.exampls-work-list-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .exampls-work-box {
