@@ -121,10 +121,23 @@ img {
 .contacts-link {
     font-style: normal;
     color: var(--secondary-color);
+
+    display: flex;
+    align-items: center;
 }
 
 .contacts .contacts-link:not(:last-child) {
     margin-right: 30px;
+}
+
+.contacts-link-svg {
+    fill: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.contacts-link:hover .contacts-link-svg,
+.contacts-link:focus .contacts-link-svg {
+    fill: var(--accent-color);
 }
 
 /* Главная секция */
@@ -132,8 +145,15 @@ img {
 .main-section {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: var(--secondary-color);
-    /* background сделал серым что бы было видно как отображается белый тест */
+    
+    background-image: linear-gradient(to bottom, 
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)),
+    url(../images/hero/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .main-title {
@@ -194,12 +214,6 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-color-theme-light);
-}
-
-.subtitle::before {
-    background-size: 70px 70px;
-    background-image: url(../images/advantages/antenna-1.svg);
-    content: "";
 }
 
 .advantages-list-item .subtitle,
@@ -279,6 +293,7 @@ img {
 .team-title-item {
     background-color: var(--main-backgroud-color);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-title-item:not(:last-child) {
     margin-right: 30px;
@@ -317,6 +332,14 @@ img {
 
 .social-icons-link {
     color: var(--clients-icon-links);
+
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    fill: var(--clients-icon-links);
 }
 
 .social-icons-link:hover,
@@ -324,8 +347,16 @@ img {
 .social-footer .social-icons-link:hover,
 .social-footer .social-icons-link:focus {
     background-color: var(--accent-color);
-    color: var(--accent-color-blu-fone);  
 }   
+
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg,
+.social-footer .social-icons-link:hover .social-icons-svg,
+.social-footer .social-icons-link:focus .social-icons-svg {
+    fill: var(--accent-color-blu-fone);
+}
+
+
 
 .clients {
     padding-top: 123px;
@@ -459,6 +490,7 @@ img {
 .filter-modal-btn:focus {
     background-color: var(--accent-color);
     color: var(--accent-color-blu-fone);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .exampls-work {
@@ -505,6 +537,11 @@ img {
 
 .exampls-work-list-item:not(:nth-last-child(-n+3)) {
     margin-bottom: 30px;
+}
+
+.exampls-work-list-item:hover,
+.exampls-work-list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .exampls-work-box {
