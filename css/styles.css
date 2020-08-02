@@ -153,7 +153,6 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
 }
 
 .main-title {
@@ -237,10 +236,23 @@ img {
     margin-right: 30px;
 }
 
-.advantages-list-img {
-    margin: 0 auto;
-    margin-bottom: 55px;
+.advantages-list-box {
+    margin-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    background-color: #F5F4FA;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
 }
+
+.advantages-list-svg {
+    --color1: var(--main-color-theme-light);
+    --color2: var(--accent-color);
+}
+
 
 .advantages-list-description {
     font-weight: 400;
@@ -356,8 +368,6 @@ img {
     fill: var(--accent-color-blu-fone);
 }
 
-
-
 .clients {
     padding-top: 123px;
     padding-bottom: 65px;
@@ -369,18 +379,32 @@ img {
     margin-bottom: 0;
 }
 
-.clients-list-item {
+.clients-list-item,
+.clients-list-link {
     display: flex;
-    width: 170px;
-    height: 90px;
-    border: 1px solid var(--clients-icon-links);
-    border-radius: 4px;
     justify-content: center;
     align-items: center;
 }
 
+.clients-list-link {
+    width: 170px;
+    height: 90px;
+    border: 1px solid var(--clients-icon-links);
+    border-radius: 4px;
+}
+
+.clients-list-link {
+    fill: var(--clients-icon-links);
+}
+
 .clients-list-item:not(:last-child) {
     margin-right: 30px;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+    fill:  var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /* Футер */
@@ -422,7 +446,8 @@ img {
     color: var(--transparent-text);
 }
 
-.social-footer .subtitle {
+.social-footer .subtitle, 
+.mailing-footer .subtitle {
     color: var(--main-color-theme-dark);
 }
 
@@ -440,9 +465,46 @@ img {
     margin-right: 10px;
 }
 
-.social-footer .subtitle {
+.social-footer .subtitle,
+.mailing-footer .subtitle {
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+.social-footer .social-icons-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-footer {
+    margin-right: 94px;
+}
+
+.mailing-footer-list {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.mailing-footer-box {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.mailing-footer-item {
+    fill: var(--accent-color-blu-fone);
+}
+
+.mailing-footer-item .modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-icon {
+    margin-left: 10px;
 }
 
 /* Портфолио */
